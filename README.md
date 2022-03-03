@@ -1,7 +1,9 @@
 # pulse-remote
 
-Pulse audio volume controller. Project is made of python server and api that is called my front end modules. 
+Pulse audio volume control. This multi repo is a wrapper for python server with REST api and webapp frontend that can be easily accessible from phone.
 
+## Status
+WIP
 
 ## Run server (python fastapi)
 
@@ -9,7 +11,7 @@ Pulse audio volume controller. Project is made of python server and api that is 
     ./run.sh
 
 
-## Run Front End (react)
+## Run Front End (React)
 
   cd pulse-remote-react
   yarn start
