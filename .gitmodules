@@ -4,3 +4,6 @@
 [submodule "pulse-remote-react"]
 	path = pulse-remote-react
 	url = git@github.com:undg/pulse-remote-react
+[submodule "go-prapi"]
+	path = go-prapi
+	url = git@github.com:undg/go-prapi
