@@ -7,3 +7,6 @@
 [submodule "go-prapi"]
 	path = go-prapi
 	url = git@github.com:undg/go-prapi
+[submodule "pr-native"]
+	path = pr-native
+	url = git@github.com:undg/pr-native
