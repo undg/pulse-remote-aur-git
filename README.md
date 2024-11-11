@@ -2,9 +2,15 @@
 
 Pulse audio volume control. This multi repo is a wrapper for server with REST or websockets api and frontend's that can be easily accessible from phone.
 
+# Status
+
+Check what was done, and what is planned todo in [pulse-remote backlog](https://github.com/users/undg/projects/4)
+
 ## Run server (go: gorilla/websockets)
 
-This will also clone https://github.com/undg/pr-web to you `/tmp` folder and build frontend
+
+Check readme in https://github.com/undg/go-prapi for latest version and instructions.
+
 ```bash
 cd go-prapi
 make build/full
@@ -20,6 +26,8 @@ make run
 - ws://localhost:8448/api/v1/schema/response - schema for ts types generation
 
 ## Run FE for go-prapi (React)
+
+Check readme in https://github.com/undg/pr-web for latest version and instructions.
 
 ```bash
 cd pr-web
