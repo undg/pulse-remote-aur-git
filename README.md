@@ -1,6 +1,7 @@
 # pulse-remote
 
 Pulse audio volume control. This multi repo is a wrapper for server with REST or websockets api and frontend's that can be easily accessible from phone.
+![image](https://github.com/user-attachments/assets/06dece38-a23d-4531-bce9-a9e43001df78)
 
 # Status
 
