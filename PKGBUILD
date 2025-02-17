@@ -1,5 +1,7 @@
+# Maintainer: Bartek Laskowski <bartek at undg dot dev>
+
 pkgname=pulse-remote-git
-pkgver=1.0.0
+pkgver=v0.8.4.r7.gd21f02f
 pkgrel=1
 pkgdesc="Remote Audio Control for PulseAudio/PipeWire. Use your phone to adjust volume on your PC."
 arch=('x86_64')
@@ -23,4 +25,9 @@ package() {
 	install -Dm755 "build/bin/pulse-remote-server" "$pkgdir/usr/bin/pulse-remote-server"
 	install -Dm644 "pulse-remote.service" "$pkgdir/usr/lib/systemd/user/pulse-remote.service"
 	install -Dm644 "../$pkgname.install" "$pkgdir/usr/share/libalpm/scripts/$pkgname.install"
+}
+
+pkgver() {
+	cd "$pkgname"
+	git describe --long --abbrev=7 --tags | sed 's/^v-//;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
