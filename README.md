@@ -29,22 +29,20 @@ Access web interface at:
 - View logs: `journalctl --user -u pulse-remote.service --output cat` (`-f` to follow new changes)
 - Verify port 8448 is open: `lsof -i :8448`
 
-## Security Note
-Service runs on all interfaces. Do not expose it to WAN
-
 ## Development 
 Backend [go-prapi](https://github.com/undg/go-prapi)
+
 Webapp [pr-web](https://github.com/undg/pr-web)
 
 Pull requests welcome!
 
-## API
+#### API
 - ws://localhost:8448/api/v1/ws - websocket endpoint to get updates and send commands
 - http://localhost:8448/api/v1/status - REST endpoint, for debugging only (read only)
 - http://localhost:8448/api/v1/schema/status - JSON schema for doc and typescript types generation
 - http://localhost:8448/api/v1/schema/message - JSON schema for doc and typescript types generation
 - http://localhost:8448/api/v1/schema/response - JSON schema for doc and typescript types generation
 
-# Roadmap
+#### Roadmap
 [pulse-remote backlog](https://github.com/users/undg/projects/4)
 
