@@ -10,8 +10,8 @@ depends=('go' 'libpulse')
 makedepends=('git')
 provides=('pulse-remote')
 
-source=("$pkgname::git+https://github.com/undg/go-prapi.git" "$pkgname.install")
-sha256sums=('SKIP' 'SKIP')
+source=("$pkgname::git+https://github.com/undg/go-prapi.git" "pulse-remote.install")
+sha256sums=('SKIP' '01269ec7984af8c36157efb7bf8c12d4de847a8458406a64b637da9c975459ff')
 
 build() {
 	cd "$pkgname"

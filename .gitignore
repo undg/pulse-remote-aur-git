@@ -2,6 +2,7 @@
 pkg/
 src/
 pulse-remote/
+pulse-remote-git/
 
 # Package files
 *.tar.zst

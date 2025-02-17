@@ -1,7 +1,14 @@
-After changing PKGBUILD regenerate .SRCINFO
+After changing PKGBUILD regenerate .SRCINFO and commit it.
 
 ```bash
 makepkg --printsrcinfo > .SRCINFO
 ```
 
-Commit changes
+
+
+Get sha256sum after altering installation files.
+
+```bash
+makepkg -g
+```
+
