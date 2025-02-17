@@ -7,6 +7,20 @@ Pulse audio volume control. This multi repo is a wrapper for server with REST or
   <img src="https://github.com/user-attachments/assets/3e9cd49a-666e-43d6-a0a5-1a1830f74cfd" width="300" alt="Image2">
 </div>
 
+# Install
+
+```bash
+git clone https://github.com/undg/pulse-remote
+
+cd pulse-remote
+
+makepkg -fi
+
+systemctl --user enable service.service
+systemctl --user start service.service
+```
+
+
 # Status
 
 Check what was done, and what is planned todo in [pulse-remote backlog](https://github.com/users/undg/projects/4)

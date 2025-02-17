@@ -1,0 +1,18 @@
+pkgbase = pulse-remote
+	pkgdesc = Pulse Remote API
+	pkgver = 1.0.0
+	pkgrel = 1
+	url = https://github.com/undg/pulse-remote
+	install = pulse-remote.install
+	arch = x86_64
+	license = MIT
+	makedepends = git
+	depends = go
+	depends = libpulse
+	provides = pulse-remote
+	source = pulse-remote::git+https://github.com/undg/go-prapi.git
+	source = pulse-remote.install
+	sha256sums = SKIP
+	sha256sums = SKIP
+
+pkgname = pulse-remote

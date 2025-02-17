@@ -1,3 +1,13 @@
-*.vim
-*.sw[oa]
+# Build files
+pkg/
+src/
+pulse-remote/
+
+# Package files
+*.tar.zst
+*.tar.gz
+*.tar.xz
+
+# Debug packages
+*-debug/
 
