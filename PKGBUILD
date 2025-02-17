@@ -1,7 +1,7 @@
-pkgname=pulse-remote
+pkgname=pulse-remote-git
 pkgver=1.0.0
 pkgrel=1
-pkgdesc="Pulse Remote API"
+pkgdesc="Remote Audio Control for PulseAudio/PipeWire. Use your phone to adjust volume on your PC."
 arch=('x86_64')
 url="https://github.com/undg/pulse-remote"
 license=('MIT')
