@@ -7,7 +7,6 @@ pkgdesc="Remote Audio Control for PulseAudio/PipeWire. Use your phone to adjust 
 arch=('x86_64')
 url="https://github.com/undg/pulse-remote"
 license=('MIT')
-install="$pkgname.install"
 depends=('go' 'libpulse')
 makedepends=('git')
 
@@ -23,7 +22,8 @@ package() {
 	cd "$pkgname"
 	install -Dm755 "build/bin/pulse-remote-server" "$pkgdir/usr/bin/pulse-remote-server"
 	install -Dm644 "pulse-remote.service" "$pkgdir/usr/lib/systemd/user/pulse-remote.service"
-	install -Dm644 "../$pkgname.install" "$pkgdir/usr/share/libalpm/scripts/$pkgname.install"
+	install -Dm644 "LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+	install -Dm644 "LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
 
 pkgver() {
