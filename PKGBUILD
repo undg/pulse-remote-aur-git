@@ -10,10 +10,9 @@ license=('MIT')
 install="$pkgname.install"
 depends=('go' 'libpulse')
 makedepends=('git')
-provides=($pkgname)
 
-source=("$pkgname::git+https://github.com/undg/go-prapi.git" "$pkgname.install")
-sha256sums=('SKIP' '01269ec7984af8c36157efb7bf8c12d4de847a8458406a64b637da9c975459ff')
+source=("$pkgname::git+https://github.com/undg/go-prapi.git")
+sha256sums=('SKIP')
 
 build() {
 	cd "$pkgname"
@@ -29,5 +28,5 @@ package() {
 
 pkgver() {
 	cd "$pkgname"
-	git describe --long --abbrev=7 --tags | sed 's/^v-//;s/\([^-]*-g\)/r\1/;s/-/./g'
+	git describe --long --abbrev=7 --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
