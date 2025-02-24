@@ -30,9 +30,9 @@ Access web interface at:
 - Verify port 8448 is open: `lsof -i :8448`
 
 ## Development 
-Backend [go-prapi](https://github.com/undg/pulse-remote)
+Backend [pulse-remote](https://github.com/undg/pulse-remote)
 
-Webapp [pr-web](https://github.com/undg/pulse-remote-web)
+Webapp [pulse-remote-web](https://github.com/undg/pulse-remote-web)
 
 Pull requests welcome!
 
