@@ -32,9 +32,9 @@ build() {
 package() {
 	cd "$pkgname"
 	install -Dm755 "build/bin/pulse-remote-server" "$pkgdir/usr/bin/pulse-remote-server"
-	install -Dm644 "dist/pulse-remote.service" "$pkgdir/usr/lib/systemd/user/pulse-remote.service"
+	install -Dm644 "os/pulse-remote.service" "$pkgdir/usr/lib/systemd/user/pulse-remote.service"
 	install -Dm644 "LICENSE" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
-	install -Dm644 "dist/pulse-remote.1" "$pkgdir/usr/share/man/man1/pulse-remote.1"
+	install -Dm644 "os/pulse-remote.1" "$pkgdir/usr/share/man/man1/pulse-remote.1"
 }
 
 pkgver() {

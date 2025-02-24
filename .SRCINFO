@@ -8,7 +8,7 @@ pkgbase = pulse-remote-git
 	makedepends = go
 	makedepends = git
 	depends = libpulse
-	source = pulse-remote-git::git+https://github.com/undg/go-prapi.git
+	source = pulse-remote-git::git+https://github.com/undg/pulse-remote.git
 	sha256sums = SKIP
 
 pkgname = pulse-remote-git
