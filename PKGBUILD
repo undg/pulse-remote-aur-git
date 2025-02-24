@@ -10,7 +10,7 @@ license=('MIT')
 depends=('libpulse')
 makedepends=('go' 'git')
 
-source=("$pkgname::git+https://github.com/undg/go-prapi.git")
+source=("$pkgname::git+https://github.com/undg/pulse-remote.git")
 sha256sums=('SKIP')
 
 prepare() {
