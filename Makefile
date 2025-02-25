@@ -27,3 +27,5 @@ clean:
 .PHONY:nuke
 nuke:
 	git clean -xdf
+	rm -rf src/
+ 
