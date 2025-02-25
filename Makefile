@@ -6,6 +6,12 @@ MEM = 2048
 CPUS = 2
 
 
+## install: force install
+.PHONY: install
+install:
+	makepkg -fi
+	makepkg --printsrcinfo > .SRCINFO
+
 ## help: print this help message
 .PHONY: help
 help:
