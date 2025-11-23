@@ -3,6 +3,7 @@ pkg/
 src/
 pulse-remote/
 pulse-remote-git/
+AGENTS.md
 
 # Package files
 *.tar.zst
