@@ -41,3 +41,9 @@ pkgver() {
 	cd "$pkgname"
 	git describe --long --abbrev=7 --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
 }
+
+post_install() {
+	echo "==> pulse-remote runs as a user service (not system-wide)"
+	echo "==> Enable: systemctl --user enable --now pulse-remote.service"
+	echo "==> Web UI: http://localhost:8448"
+}
