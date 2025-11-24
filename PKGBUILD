@@ -1,7 +1,7 @@
 # Maintainer: Bartek Laskowski <bartek at undg dot dev>
 
 pkgname=pulse-remote-git
-pkgver=0.9.14.r0.g15c8d79
+pkgver=0.9.16.r0.g9492c8d
 pkgrel=1
 pkgdesc="Remote Audio Control for PulseAudio/PipeWire. Use your phone to adjust volume on your PC."
 arch=('x86_64')
@@ -9,6 +9,7 @@ url="https://github.com/undg/pulse-remote"
 license=('MIT')
 depends=('libpulse')
 makedepends=('go' 'git')
+install=pulse-remote-git.install
 
 source=("$pkgname::git+https://github.com/undg/pulse-remote.git")
 sha256sums=('SKIP')
@@ -40,10 +41,4 @@ package() {
 pkgver() {
 	cd "$pkgname"
 	git describe --long --abbrev=7 --tags | sed 's/^v//;s/\([^-]*-g\)/r\1/;s/-/./g'
-}
-
-post_install() {
-	echo "==> pulse-remote runs as a user service (not system-wide)"
-	echo "==> Enable: systemctl --user enable --now pulse-remote.service"
-	echo "==> Web UI: http://localhost:8448"
 }
