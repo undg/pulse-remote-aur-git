@@ -1,7 +1,7 @@
 # Maintainer: Bartek Laskowski <bartek at undg dot dev>
 
 pkgname=pulse-remote-git
-pkgver=0.9.16.r0.g9492c8d
+pkgver=0.9.17.r0.g1008250
 pkgrel=1
 pkgdesc="Remote Audio Control for PulseAudio/PipeWire. Use your phone to adjust volume on your PC."
 arch=('x86_64')
