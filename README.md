@@ -1,59 +1,57 @@
-# pulse-remote
+# pulse-remote-git (AUR)
 
 [![License](https://img.shields.io/github/license/undg/pulse-remote)](https://github.com/undg/pulse-remote/blob/main/LICENSE)
 
-Control PulseAudio volume from any device through web browser <!-- or mobile app -->. Features:
+**AUR package repository for pulse-remote** - Control PulseAudio/PipeWire volume from any device through web browser.
 
-- Remote volume control for PulseAudio and Pipewire sinks/sources
-- Mobile-friendly web interface
-- Real-time updates via WebSocket
-- WebSocket API for integration
+> **Note:** This is the AUR packaging repository. For the main project source code, see [github.com/undg/pulse-remote](https://github.com/undg/pulse-remote).
 
-<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-  <img src="https://github.com/user-attachments/assets/464f7ee0-b1b8-4dbf-86d2-6310b97b3678" width="300" alt="Image1">
-  <img src="https://github.com/user-attachments/assets/3e9cd49a-666e-43d6-a0a5-1a1830f74cfd" width="300" alt="Image2">
-</div>
+## Installation
 
-## Quick Install
+### Using an AUR Helper (Recommended)
 
 ```bash
-git clone https://github.com/undg/pulse-remote
-cd pulse-remote
-makepkg -fi
-systemctl --user enable pulse-remote.service
-systemctl --user start pulse-remote.service
+yay -S pulse-remote-git
+# or
+paru -S pulse-remote-git
 ```
+
+### Manual Installation from AUR
+
+```bash
+git clone https://aur.archlinux.org/pulse-remote-git.git
+cd pulse-remote-git
+makepkg -si
+```
+
+### Enable and Start Service
+
+```bash
+systemctl --user enable --now pulse-remote.service
+```
+
+## Usage
 
 Access web interface at:
 
 - Local: http://localhost:8448
 - Remote: http://YOUR_PC_IP:8448 (from phone/other devices)
 
-Access with electron app:
-https://github.com/undg/pulse-remote-desktop
+Desktop app available at: [pulse-remote-desktop](https://github.com/undg/pulse-remote-desktop)
 
 ## Troubleshooting
 
 - Check service status: `systemctl --user status pulse-remote.service`
-- View logs: `journalctl --user -u pulse-remote.service --output cat` (`-f` to follow new changes)
+- View logs: `journalctl --user -u pulse-remote.service --output cat` (`-f` to follow)
 - Verify port 8448 is open: `lsof -i :8448`
 
-## Development
+## Project Links
 
-Backend [pulse-remote](https://github.com/undg/pulse-remote)
+- **Main Project:** [github.com/undg/pulse-remote](https://github.com/undg/pulse-remote)
+- **Web Interface:** [pulse-remote-web](https://github.com/undg/pulse-remote-web)
+- **Desktop App:** [pulse-remote-desktop](https://github.com/undg/pulse-remote-desktop)
+- **Roadmap:** [Project Backlog](https://github.com/users/undg/projects/4)
 
-Webapp [pulse-remote-web](https://github.com/undg/pulse-remote-web)
+## For Package Maintainers
 
-Desktop app [pulse-remote-desktop](https://github.com/undg/pulse-remote-desktop)
-
-#### API
-
-- ws://localhost:8448/api/v1/ws - websocket endpoint to get updates and send commands
-- http://localhost:8448/api/v1/status - REST endpoint, for debugging only (read only)
-- http://localhost:8448/api/v1/schema/status - JSON schema for doc and typescript types generation
-- http://localhost:8448/api/v1/schema/message - JSON schema for doc and typescript types generation
-- http://localhost:8448/api/v1/schema/response - JSON schema for doc and typescript types generation
-
-#### Roadmap
-
-[pulse-remote backlog](https://github.com/users/undg/projects/4)
+See [README-build.md](README-build.md) for AUR package maintenance instructions.
