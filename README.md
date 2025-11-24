@@ -44,7 +44,7 @@ Backend [pulse-remote](https://github.com/undg/pulse-remote)
 
 Webapp [pulse-remote-web](https://github.com/undg/pulse-remote-web)
 
-Pull requests welcome!
+Desktop app [pulse-remote-desktop](https://github.com/undg/pulse-remote-desktop)
 
 #### API
 
